@@ -1,57 +1,65 @@
 ## Olist E-Commerce Business Analytics
+📌 Project Overview
 
-### Project Overview
+This project analyzes the Olist Brazilian E-Commerce marketplace to understand business performance across sales, customers, products, geography, order fulfillment, delivery, and customer experience.
 
-This project analyzes the Olist Brazilian e-commerce marketplace to
-understand sales, customers, products, sellers, delivery operations, and
-customer experience.
+The objective was not simply to build a dashboard, but to follow a practical Data Analyst workflow:
 
-The goal was to go beyond dashboard creation by combining data
-validation, SQL business analysis, data modeling, and Power BI
-storytelling.
+Understand the business → Validate the data → Analyze with SQL → Identify insights → Build a focused Power BI dashboard → Recommend business actions
 
-Tools are the means. Business reasoning is the product.
+The analysis focuses on identifying opportunities to improve sales performance, customer retention, category performance, delivery reliability, and customer satisfaction.
 
-Business Problem
+🎯 Business Objectives
 
-The business needs a consolidated view of:
+The project addresses five major business areas:
 
-Sales and order performance
+Sales Performance
+Understand sales trends, order volume, AOV, and category performance.
+Customer Analytics
+Analyze customer base, repeat purchasing, retention, and geographic concentration.
+Product & Category Performance
+Identify high-performing categories and compare sales with order-item volume.
+Operational Performance
+Evaluate order status and delivery reliability.
+Customer Experience
+Understand how delivery performance is associated with customer review scores.
+🗂️ Dataset
 
-Customer retention
+The project uses the Olist Brazilian E-Commerce Public Dataset, containing approximately 100K orders across multiple relational tables.
+**Dataset:** [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-Product and category performance
+Main Tables
+Table	Purpose
+orders	Order lifecycle, timestamps, and status
+customers	Customer and geographic information
+order_items	Products, sellers, prices, and freight
+products	Product attributes and categories
+sellers	Seller information
+order_payments	Payment information
+order_reviews	Customer reviews and ratings
+product_category	Product category translation
+geolocation	Geographic information
 
-Geographic concentration
+🛠️ Tools & Technologies
+PostgreSQL / pgAdmin — SQL analysis and data validation
+SQL — business analysis and metric calculation
+Microsoft Excel — targeted data-quality validation
+Power BI — data modeling, DAX, visualization, and dashboard storytelling
+Tool Strategy
 
-Delivery reliability
+## Each tool had a specific role:
 
-Customer satisfaction
+Tool	Purpose
+Excel	Validate
+SQL	Analyze
+Power BI	Communicate
 
-Areas requiring business attention
-
-Dataset
-
-Main tables:
-
-orders
-
-customers
-
-order_items
-
-order_payments
-
-order_reviews
-
-products
-
-sellers
-
-product_category
-
+This avoided repeating the same analysis across multiple tools.
 Data Validation
 
+Before performing business analysis, several data-quality checks were performed.
+
+Examples included:
 Key checks included primary-key uniqueness, duplicates, row counts,
 customer uniqueness, order/item relationships, multiple payment and
 review records, missing order lifecycle dates, product nulls, and status
@@ -67,7 +75,7 @@ Order-item records                    112,650
 Orders represented in order items      98,666
 Delivered orders                       96,478
 
-SQL Analysis
+## SQL Analysis
 
 SQL was used for the main business analysis:
 
@@ -87,7 +95,7 @@ Delivery time and late-delivery analysis
 
 Review and customer-experience analysis
 
-Key Business Metrics
+## Key Business Metrics
 
 Metric                            Result
 
@@ -106,7 +114,7 @@ Product Sales is the sum of item prices from order_items. It should
 not automatically be interpreted as accounting revenue because freight
 and other financial components are excluded.
 
-Key Business Insights
+## Key Business Insights
 
 1. Customer retention is weak
 Only 2,997 of 96,096 unique customers were repeat customers, giving
@@ -198,7 +206,7 @@ Dashboard Storytelling
        ↓
 Business Recommendations
 
-Tool responsibilities were intentionally separated:
+## Tool responsibilities were intentionally separated:
 
 Excel → targeted validation
 
@@ -226,25 +234,28 @@ when analyzing orders from order_items, use distinct order_id rather
 than row count.
 
 ## Business Recommendations
+1. Improve Customer Retention
 
-Improve customer retention through reactivation, personalized
-offers and post-purchase engagement.
+Develop targeted re-engagement strategies for one-time customers and identify categories with stronger repeat-purchase potential.
 
-Reduce late deliveries and investigate high-risk states, sellers
-and categories.
+2. Improve Delivery Reliability
 
-Monitor geographic performance, especially the dominant São
-Paulo market and states with high delivery delays.
+Prioritize states and sellers with high late-delivery rates.
 
-Evaluate categories using multiple dimensions: Sales + Volume +
-Average Price + Customer Experience.
+3. Protect Customer Experience
 
-Monitor seller performance for availability, delivery
-reliability and customer satisfaction.
+Monitor delivery performance alongside customer review scores because late delivery is associated with substantially lower ratings.
 
+4. Strengthen High-Performing Categories
+
+Investigate leading categories such as Health & Beauty for pricing, seller availability, customer retention, and cross-selling opportunities.
+
+5. Use Geographic Segmentation
+
+Treat major states as distinct markets because customer and sales concentration varies considerably across geography.
 Skills Demonstrated
 
-Business problem framing
+## Business problem framing
 
 Data quality validation
 
