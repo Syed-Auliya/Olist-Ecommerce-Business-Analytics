@@ -1,5 +1,5 @@
-## Olist E-Commerce Business Analytics
-📌 Project Overview
+# Olist E-Commerce Business Analytics
+## 📌 Project Overview
 
 This project analyzes the Olist Brazilian E-Commerce marketplace to understand business performance across sales, customers, products, geography, order fulfillment, delivery, and customer experience.
 
@@ -9,7 +9,7 @@ Understand the business → Validate the data → Analyze with SQL → Identify 
 
 The analysis focuses on identifying opportunities to improve sales performance, customer retention, category performance, delivery reliability, and customer satisfaction.
 
-🎯 Business Objectives
+## 🎯 Business Objectives
 
 The project addresses five major business areas:
 
