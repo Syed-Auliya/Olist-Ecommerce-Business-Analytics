@@ -169,12 +169,15 @@ Power BI Dashboard
 The final dashboard intentionally uses two pages.
 
 ## Page 1 --- Executive Overview 
-<img width="1201" height="672" alt="image" src="https://github.com/user-attachments/assets/00efefb6-7692-4c47-a63d-7918af7571f2" />
+<img width="1292" height="730" alt="image" src="https://github.com/user-attachments/assets/59783030-3fa9-485f-af70-2334a2c53e1e" />
+
 
 
 
 ## Page 2 --- Customer & Sales Analytics
-<img width="1200" height="681" alt="Screenshot 2026-10-04 111920" src="https://github.com/user-attachments/assets/972d8abb-7e80-4742-bae7-6335cc58b448" />
+<img width="1286" height="727" alt="image" src="https://github.com/user-attachments/assets/e3581b1b-8fe8-4ca9-8ea0-16061dabed31" />
+
+
 
 
 ## Analytical Workflow
